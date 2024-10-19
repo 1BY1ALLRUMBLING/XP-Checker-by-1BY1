@@ -1,0 +1,112 @@
+/* Устанавливаем чёрный фон для всей страницы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000; /* Чёрный фон */
+    color: #ffffff; /* Белый текст для контраста */
+    height: 100vh; /* Высота страницы равна высоте окна браузера */
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+}
+
+/* Стилизация контейнера */
+.container {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для контейнера */
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Размытие фона за контейнером */
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Стилизация заголовка */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Секция ввода и кнопки */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Стилизация поля ввода */
+input[type="text"] {
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: #dddddd;
+}
+
+/* Стилизация кнопки */
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background-color: #1e90ff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 150px;
+}
+
+button:hover {
+    background-color: #63b3ed;
+    transform: translateY(-2px);
+}
+
+/* Стилизация результата */
+#result {
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#result.show {
+    opacity: 1;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    input[type="text"] {
+        max-width: 100%;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
